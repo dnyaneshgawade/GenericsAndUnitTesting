@@ -7,7 +7,7 @@ namespace Generics
         static void Main(string[] args)
         {
             Maximum maximum = new Maximum();
-            maximum.MaximumFloat(11.1, 33.3, 22.2);
+            maximum.MaximumString("Apple", "Peach", "Banana");
         }
     }
 }
