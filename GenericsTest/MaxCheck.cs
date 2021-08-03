@@ -14,22 +14,22 @@ namespace GenericsTest
             public void GivenMaxNumFirstPostion_WhenFindMaxNum_shouldReturnsMaxFirst()
             {
                 Maximum max = new Maximum();
-                int result = max.MaximumInteger(100, 50, 25);
-                Assert.AreEqual(100, result);
+                double result = max.MaximumFloat(100.4, 50.5, 25.8);
+                Assert.AreEqual(100.4, result);
             }
             [TestMethod]
             public void GivenMaxNumSecondPostion_WhenFindMaxNum_shouldReturnsMaxSecond()
             {
                 Maximum max = new Maximum();
-                int result = max.MaximumInteger( 50, 100, 25);
-                Assert.AreEqual(result,100);
+                double result = max.MaximumFloat( 50.5, 100.4, 25.8);
+                Assert.AreEqual(100.4, result);
             }
             [TestMethod]
             public void GivenMaxNumThirdPostion_WhenFindMaxNum_shouldReturnsMaxThird()
             {
                 Maximum max = new Maximum();
-                int result = max.MaximumInteger(50, 25, 100);
-                Assert.AreEqual(result, 100);
+                double result = max.MaximumFloat(50.4, 25.8, 100.4);
+                Assert.AreEqual(100.4, result);
             }
 
         }
