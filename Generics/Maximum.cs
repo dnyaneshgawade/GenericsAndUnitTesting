@@ -6,16 +6,14 @@ namespace Generics
 {
     public class Maximum
     {
-        public static string all = "all are same";
-        public string MaximumString(string firstNumber, string secondNumber, string thirdNumber)
+        public void MaxValue<T>(T firstValue, T secondValue, T thirdValue) where T : IComparable
         {
-            if (firstNumber.CompareTo(secondNumber) > 0 && firstNumber.CompareTo(thirdNumber) > 0)
-                return firstNumber;
-            if (secondNumber.CompareTo(firstNumber) > 0 && secondNumber.CompareTo(thirdNumber) > 0)
-                return secondNumber;
-            if (thirdNumber.CompareTo(firstNumber) > 0 && thirdNumber.CompareTo(secondNumber) > 0)
-                return thirdNumber;
-            return all;
+            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
+                Console.WriteLine(firstValue + " : is maximum");
+            if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0)
+                Console.WriteLine(secondValue + " : is maximum");
+            if (thirdValue.CompareTo(firstValue) > 0 && thirdValue.CompareTo(secondValue) > 0)
+                Console.WriteLine(thirdValue + " : is maximum");
         }
     }
 }
